@@ -1,0 +1,61 @@
+.breadcrumb {
+  position: relative;
+
+  &[data-is-blog="true"] {
+    margin: 1.5rem 1rem 0 1rem;
+    padding-bottom: 1.5rem;
+
+    @include themify($themes) {
+      border-bottom: 1px solid themed('hr-color');
+      background-color: themed('breadcrumb-background-color');
+    }
+  }
+
+  &[data-is-blog="false"] {
+    margin: auto 2rem;
+    padding: 1.75rem 0;
+    font-size: $font-size-sm;
+  }
+
+  ol {
+    @include flexbox();
+    @include align-items(center);
+    @include flex-wrap(wrap);
+  }
+
+  li {
+    display: inline;
+    font-size: 0.9rem;
+
+    @include truncate(300px);
+
+    a {
+      @include themify($themes) {
+        color: themed('breadcrumb-item-color');
+        @include on-event {
+          color: themed('link-hover');
+        }
+      }
+    }
+
+    &:last-child {
+      @include themify($themes) {
+        color: themed('breadcrumb-item-active-color');
+      }
+    }
+  }
+
+  li+li:before {
+    padding: 0.5rem;
+    content: url("data:image/svg+xml,%3Csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 7L4 4L1 1' stroke='%2353585F' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");;
+    @include themify($themes) {
+      color: themed('breadcrumb-item-color');
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    &[data-is-blog="false"] {
+      margin: auto 1rem;
+    }
+  }
+}

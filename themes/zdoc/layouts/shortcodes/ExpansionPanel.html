@@ -1,0 +1,15 @@
+{{ $id := substr (md5 .Inner) 0 16 }}
+
+<div class="ExpansiionPanel">
+  <input type="checkbox" id="{{ $id }}" class="hide">
+
+  <div class="title">
+    <label for="{{ $id }}">
+      {{ partial "svgs/arrow-down.svg" (dict "width" 16 "height" 8) }}{{ .Get "title" }}
+    </label>
+  </div>
+
+  <div class="content">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

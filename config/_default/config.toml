@@ -1,0 +1,47 @@
+baseURL = "https://training.corda.net"
+title = "Corda Training - Corda Training and Tutorials - Corda Docs"
+theme = "zdoc"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = false
+
+copyright = "&copy; {year} R3, All Rights Reserved"
+timeout = 10000
+enableEmoji = true
+paginate = 13
+rssLimit = 100
+
+googleAnalytics = "UA-87760032-4@"
+
+disableKinds = ["taxonomyTerm"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+      unsafe = true
+      xHTML = true
+  [markup.highlight]
+    codeFences = true
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
+
+[taxonomies]
+  tag = "tags"
+

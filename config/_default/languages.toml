@@ -1,0 +1,11 @@
+[en]
+  title = "R3 Developer"
+  languageName = "English"
+  weight = 1
+  contentdir = "content/en"
+
+[ko]
+  title = "R3 Developer"
+  languageName = "한국어"
+  weight = 2
+  contentdir = "content/ko"

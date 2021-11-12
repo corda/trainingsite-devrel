@@ -1,0 +1,23 @@
+{{ if $.Param "enableSearch" }}
+<div id="mobileSearchBtn" class="mobile-search__btn">
+  {{ partial "svgs/search.svg" (dict "width" 20 "height" 19) }}
+</div>
+
+<div id="search-mobile-container" class="mobile-search" style="display: none">
+  <div class="mobile-search__top">
+    <div class="search">
+      <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search Corda docs" class="mobile-search__top--input"/>
+
+      <label class="icon" for="search">
+        {{ partial "svgs/search.svg" (dict "width" 20 "height" 19) }}
+      </label>
+    </div>
+
+
+    <div id="search-mobile-close" class="mobile-search__top--icon">
+      {{ partial "svgs/cancel.svg" (dict "width" 22 "height" 22) }}
+    </div>
+  </div>
+
+</div>
+{{ end }}

@@ -1,0 +1,62 @@
+{{ partial "main/component/algolia.html" . }}
+
+{{ if .Site.Params.custom_js }}
+{{ range .Site.Params.custom_js }}
+  {{ $custom_template := resources.Get . }}
+  {{ if $custom_template }}
+    {{ $custom_js := $custom_template | resources.Minify | resources.Fingerprint }}
+    <script defer src="{{ $custom_js.RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
+{{ end }}
+
+{{ if $.Param "enableSearch" }}
+  {{ $fuse := resources.Get "js/fuse.min.js" | resources.Fingerprint }}
+  <script defer src="{{ $fuse.RelPermalink }}"></script>
+{{ end }}
+
+{{ $enquire := resources.Get "js/enquire.min.js" | resources.Fingerprint }}
+<script src="{{ $enquire.RelPermalink }}"></script>
+{{ $lazysizes := resources.Get "js/lazysizes.min.js" | resources.Fingerprint }}
+<script defer src="{{ $lazysizes.RelPermalink }}"></script>
+{{ $getParents := resources.Get "js/helper/getParents.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $getParents.RelPermalink }}"></script>
+{{ $fadeinout := resources.Get "js/helper/fadeinout.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $fadeinout.RelPermalink }}"></script>
+
+
+<script>
+  {{ $languagedir := ($.Param "languagedir" | default "ltr") }}
+  var languagedir = JSON.parse({{ $languagedir | jsonify }});
+  {{ $baseurl := $.Site.BaseURL }}
+  var baseurl = JSON.parse({{ $baseurl | jsonify }});
+  {{ $permalink := .Permalink }}
+  var permalink = JSON.parse({{ $permalink | jsonify }});
+  {{ $enableDarkMode := ($.Param "enableDarkMode") }}
+  var enableDarkMode = JSON.parse({{ $enableDarkMode | jsonify }});
+  {{ $tocLevels := ($.Param "tocLevels") }}
+  var tocLevels = JSON.parse({{ $tocLevels | jsonify }});
+  {{ $isLandingBgImg := $.Params.landing.backgroundImage }}
+  var isLandingBgImg = JSON.parse({{ $isLandingBgImg | jsonify }});
+  {{ $isHome := .IsHome }}
+  var isHome = JSON.parse({{ $isHome | jsonify }});
+  {{ $langprefix := $.Site.LanguagePrefix }}
+  var langprefix = JSON.parse({{ $langprefix | jsonify }});
+  {{ $enableSearchHighlight := ($.Param "enableSearchHighlight") }}
+  var enableSearchHighlight = JSON.parse({{ $enableSearchHighlight | jsonify }});
+  {{ $enableSearch := ($.Param "enableSearch") }}
+  var enableSearch = JSON.parse({{ $enableSearch | jsonify }});
+
+  {{ $algoliaAppId := ($.Param "algolia_appId") }}
+  var algoliaAppId = JSON.parse({{ $algoliaAppId | jsonify }});
+  {{ $algoliaKey := ($.Param "algolia_apiKey") }}
+  var algoliaKey = JSON.parse({{ $algoliaKey | jsonify }});
+  {{ $algoliaIndex := ($.Param "algolia_index") }}
+  var algoliaIndex = JSON.parse({{ $algoliaIndex | jsonify }});
+
+</script>
+
+{{ $app := resources.Get "js/app.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $app.RelPermalink }}"></script>
+
+

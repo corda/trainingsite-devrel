@@ -1,0 +1,97 @@
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  z-index: z('modal');
+  left: -100%;
+  top: 72px;
+  right: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden;
+  opacity: 0;
+  background: rgba(0,0,0,0.6);
+
+  @include transition(opacity, 0.25s, ease-in-out);
+}
+
+.popup-modal {
+  position: fixed;
+  z-index: z('modal');
+  left: -100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background: rgba(0,0,0,0.6);
+
+  @include transition(opacity, 0.25s, ease-in-out);
+
+  &.show {
+    left: 0;
+    opacity: 1;
+  }
+
+  .modal-content {
+    @include themify($themes) {
+      background-color: themed('popup-background');
+    }
+
+    position: relative;
+    width: auto;
+    padding: 1.5rem;
+    margin: 1.75rem;
+    border-radius: 1rem;
+
+    .modal-header {
+      @include flexbox();
+      @include justify-content(space-between);
+
+      .btn-close {
+        border: none;
+        background: none;
+        cursor: pointer;
+        text-align: right;
+
+        @include themify($themes) {
+          color: themed('body-color-ligher');
+        }
+
+        @include on-event {
+          @include themify($themes) {
+            color: themed('body-color');
+          }
+        }
+      }
+    }
+
+    .modal-body {
+
+    }
+
+    .modal-footer {
+
+    }
+  }
+
+
+
+  @media only screen and (min-width: 576px) {
+    .modal-content {
+      max-width: 816px;
+      margin-top: 8rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}
+

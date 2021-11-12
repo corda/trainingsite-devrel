@@ -1,0 +1,160 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "header" }}
+  {{ partial "header/site-header.html" . }}
+{{ end }}
+{{ define "main" }}
+
+<div class="mid home">
+  <main>
+  <div class="divider home__header">
+    <div class="lmr">
+      <div class="home__header--image">
+        <img src="/corda.svg" alt="Corda" width="200">
+        <h1>Welcome to Corda training</h1>
+      </div>
+      <div class="home__header--links">
+        <ul>
+          <li>
+            <a href="/key-concepts/introduction/">
+              <img src="/images/icons/box-ribbon.svg" alt="Corda" height="40">
+              <span>Introduction to Corda</span>
+              {{ partial "svgs/arrow-forward.svg" (dict "width" 22 "height" 22) }}
+            </a>
+          </li>
+          <li>
+            <a href="/key-concepts/concepts/">
+              <img src="/images/icons/document.svg" alt="Corda" height="40">
+              <span>Key concepts</span>
+              {{ partial "svgs/arrow-forward.svg" (dict "width" 22 "height" 22) }}
+            </a>
+          </li>
+          <li>
+            <a href="/first-code/introduction/">
+              <img src="/images/icons/window-code.svg" alt="Corda" height="40">
+              <span>Example code</span>
+              {{ partial "svgs/arrow-forward.svg" (dict "width" 22 "height" 22) }}
+            </a>
+          </li>
+          <li>
+            <a onclick="App.showPopup('certified')">
+              <img src="/images/icons/award.svg" alt="Corda" height="40">
+              <span>Get certified</span>
+              {{ partial "svgs/arrow-forward.svg" (dict "width" 22 "height" 22) }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider">
+
+    <nav id="list-menu" class="l">
+      {{ partial "main/sections/list-menu.html" . }}
+    </nav>
+
+    <div id="list-main" class="mr" >
+      <div class="home__content">
+          <div class="grid-2">
+            <div>
+              <h2 class="intro">Corda is an open source blockchain platform to solve complex business problems.</h2>
+              <p>Permissionless blockchain platforms, in which all data is shared with all parties, are largely unsuited for businesses. Corda was designed to only share data with relevant parties. Corda is flexible and scalable and ensures a high level of privacy and security. </p>
+              <p>Distributed ledger applications on a high performance, enterprise grade platform. That is Corda.</p>
+            </div>
+            <div>
+              <img src="/corda-training-1.png" alt="Corda training" class="light-only">
+              <img src="/corda-training-1-dark.png" alt="Corda training" class="dark-only">
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="text-center">
+              {{ partial "svgs/artificial-brain.svg" }}
+              <strong>Design distributed ledger solutions based on a deep understanding of this new paradigm.</strong>
+            </div>
+            <div class="text-center">
+              {{ partial "svgs/code-editor.svg" }}
+              <strong>Skillfully execute, producing code that showcases your understanding of best practices and knowledge of the SDK.</strong>
+            </div>
+            <div class="text-center">
+              {{ partial "svgs/agenda-bookmark.svg" }}
+              <strong>Theorical material and hands-on experience. Run your first CorDapp and dive into advanced techniques and best practices.</strong>
+            </div>
+          </div>
+      </div>
+
+      <div class="home__background">
+        <div class="home__content">
+          <div class="how-to">
+            <strong>Grow your skills and connect with developers who share same interests</strong>
+            <h2 class="guide">
+              How to use this training
+            </h2>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <img src="/corda-training-2.png" alt="How to use this training" class="light-only">
+              <img src="/corda-training-2-dark.png" alt="How to use this training" class="dark-only">
+            </div>
+            <div>
+              <p>If you are new to blockchains and distributed ledgers, start with the <a href="/fundamentals/introduction/">fundamentals</a> module. This brief overview of the universe of distributed application platforms provides background information that will help you appreciate Corda's unique approach. Carry on to <a href="/key-concepts/concepts/">Key concepts</a> to discover Corda's unique approach to distributed applications for enterprise settings.</p>
+              <p>As you work your way through the exercises you will construct a realistic CorDapp with incrementally increasing sophistication as you learn. When you are invited to work on your own, a solution is provided in the next section. Look for the expandable code panels that present links to the code. Advanced users who want to skip over early sections can jump in later by using the solution example of the previous exercise.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <section id="list-side" class="hide" >
+    </section>
+  </div>
+  </main>
+</div>
+
+<div class="popup-modal" id="certified">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="space"></div>
+      <button type="button" class="btn-close" data-action="close" aria-label="Close">
+        {{ partial "svgs/close.svg" (dict "width" 24 "height" 24) }}
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="certified-form">
+        <div class="title">
+          <h3>Become a certified Corda developer today!</h3>
+        </div>
+        <div class="form">
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ partial "script/codeblock-script.html" . }}
+{{ partial "script/single-script.html" . }}
+
+<script>
+  var listMenu = document.getElementById('list-menu');
+  var listMain = document.getElementById('list-main');
+
+  enquire.register("screen and (max-width:600px)", {
+    match: function () {
+      listMenu.className = 'hide';
+      listMain.className = 'lmr';
+    },
+    unmatch: function () {
+      listMenu.className = 'l';
+      listMain.className = 'mr';
+    },
+  });
+
+
+</script>
+
+{{ end }}

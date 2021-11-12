@@ -1,0 +1,336 @@
+.home {
+  &__landing {
+    width: 100%;
+
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+
+    @media only screen and (max-width: 600px) {
+      @include flex-direction(column);
+    }
+
+    &--img {
+      margin: 0.5rem;
+      z-index: z('landing');
+    }
+
+    &--txt {
+      margin: 2.5rem 0.5rem;
+      z-index: z('landing');
+
+      .title {
+        font-size: 56px;
+        font-weight: $font-weight-black;
+        font-family: $title-font;
+      }
+
+      .text {
+        font-size: 22px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        text-align: center;
+      }
+    }
+
+    &--link {
+      text-decoration: none !important;
+    }
+
+    &--btn {
+      margin-top: 2.5rem;
+      margin-right: 0.5rem;
+    }
+
+    &--btn2 {
+      margin: 0.5rem;
+    }
+  }
+
+  &__social {
+    width: 100%;
+    padding: 1rem 0;
+
+    @include flexbox();
+    @include justify-content(center);
+
+    &--item {
+      margin: 0 0.25rem;
+    }
+  }
+
+  &__banner {
+    width: 100%;
+    padding: 0.75rem;
+
+    @include flexbox();
+    @include justify-content(center);
+
+    &--wrapper {
+      @include themify($themes) {
+        background-color: themed('banner-background-color');
+      }
+    }
+  }
+
+  &__header {
+    min-height: 20rem;
+    height: unset;
+    text-align: center;
+    padding: 0 2rem;
+    color: $white;
+
+    &::before {
+      background: url("/images/background.png") no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: top center;
+      position: absolute;
+      content: " ";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      opacity: .95;
+      z-index: 0;
+    }
+
+    @media only screen and (max-width: 960px) {
+      &::before {
+        background-size: auto 100vh;
+      }
+    }
+
+    > div {
+      z-index: 10;
+    }
+
+    &--image {
+      img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1.75rem;
+      }
+
+      h1 {
+        line-height: 1;
+        font-size: 2.5rem;
+        font-weight: $font-weight-extrabold;
+      }
+      padding: 3rem 0;
+      border-bottom: solid 1px $gray-550;
+    }
+
+    &--links {
+      padding: 1.5rem 0;
+
+
+      ul {
+        @include flexbox();
+        @include justify-content(space-around);
+        @include align-items(center);
+
+        @media only screen and (max-width: 1280px) {
+          @include flex-wrap(wrap);
+          @include flex-direction(column);
+          gap: 1rem;
+          max-height: 100px;
+        }
+
+        @media only screen and (max-width: 600px) {
+          max-height: unset;
+        }
+
+        li {
+          a {
+            @include flexbox();
+            @include justify-content(center);
+            @include align-items(center);
+            color: white;
+            font-weight: $font-weight-bold;
+            font-size: $font-size-lg;
+
+            img {
+              margin-right: 1rem;
+            }
+
+            span {
+              margin-right: 0.5rem;
+            }
+
+            @include on-event(){
+              color: $red;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__background {
+
+    padding-top: 3.5rem;
+    position: relative;
+
+    @include themify($themes) {
+      background-color: themed("body-background-color-alternate");
+    }
+
+    &::before {
+      content: " ";
+      height: 5.5rem;
+      width: 2px;
+      border-left: solid 2px $red;
+      position: absolute;
+      left: 50%;
+      top: 0;
+    }
+
+    @media only screen and (max-width: 960px) {
+      &::before {
+        height: 4.5rem;
+      }
+    }
+  }
+
+  &__content {
+    padding: 3rem 2rem 2rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    @media only screen and (max-width: 960px) {
+      padding: 2rem 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: $red;
+      text-decoration: none;
+
+      @include on-event(){
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+
+    h2 {
+      &.intro {
+        font-size: 1.5rem;
+        line-height: 1.42;
+        font-weight: $font-weight-base;
+        margin: 0 0 2rem;
+      }
+
+      &.guide {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-top: 0.25rem;
+        margin-bottom: 4.5rem;
+      }
+    }
+
+    .how-to {
+      text-align: center;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      margin-bottom: 3.5rem;
+
+      & > div {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center)
+      }
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+
+      &>div:first-child {
+        padding: 0 2rem;
+      }
+    }
+
+    img,
+    svg {
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+
+
+    @media only screen and (max-width: 1180px) {
+
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+
+        &>div{
+          padding: 0 2rem;
+        }
+      }
+    }
+
+
+    @media only screen and (max-width: 600px) {
+      h2 {
+        &.intro {
+          font-size: 1.25rem;
+        }
+        &.guide {
+          font-size: 2rem;
+        }
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  }
+}
+
+.certified-form {
+  .title {
+    text-align: center;
+
+    h3 {
+      font-size: $font-size-2xl;
+      font-weight: normal;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 2.25rem;
+    }
+  }
+
+  @media only screen and (min-width: 576px) {
+    .title {
+
+      h3 {
+        font-size: $font-size-4xl;
+        max-width: 400px;
+      }
+    }
+  }
+}

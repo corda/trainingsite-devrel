@@ -1,0 +1,70 @@
+.codetab {
+  position: relative;
+
+  &__links {
+    position: absolute;
+    left: 0;
+    z-index: z('clipboard');
+
+    @include flexbox();
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+
+  }
+
+  &__link {
+    z-index: z('clipboard');
+    height: 40px;
+    font-family: $title-font;
+    font-weight: $font-weight-bold;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    display: inline-block;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    content: attr(data-lang);
+    text-transform: capitalize;
+    min-width: 7rem;
+    text-align: center;
+
+    margin-right: 0.25rem;
+    color: #53585F;
+    border: none;
+
+
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+    }
+    //
+    //@include transition(all, 0.2s, ease-in);
+
+    @include themify($codeblock) {
+      border-top: 4px solid transparent;
+      background-color: themed('tab-background-color');;
+      color: themed('tab-inactive-color');;
+
+      &.active {
+        height: 41px;
+        background-color: themed('content-pre-background-color');
+        border-top: solid 0.25rem $red;
+        color: themed('tab-active-color');;
+      }
+
+      @include on-event {
+        color: $gray-50;
+        background-color: themed('content-pre-background-color');
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &>div {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-top: 2.5rem;
+    }
+  }
+
+}

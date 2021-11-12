@@ -1,0 +1,18 @@
+<a href="{{ .Get "href" }}" class="NavigationCard card">
+<div>
+    <div class="card-title">
+        {{ .Get "title" }}
+    </div>
+    <div class="card-body">
+        <div class="card-body-content">
+            {{ .Inner }}
+        </div>
+
+        <div class="card-body-footer">
+            {{ partial "svgs/clock.svg" (dict "width" 20 "height" 20) }} {{ .Get "readingtime" }} min
+        </div>
+    </div>
+</div>
+</a>
+
+

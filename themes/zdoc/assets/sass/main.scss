@@ -1,0 +1,95 @@
+
+$black: #000000;
+$white: #FFFFFF;
+$gray-50: #FCFCFC;
+$gray-100: #F3F4F6;
+$gray-200: #EFF0F7;
+$gray-300: #D1D5DB;
+$gray-350: #DADBE3;
+$gray-400: #88909B;
+$gray-500: #6b7280;
+$gray-550: #53585F;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-750: #262626;
+$gray-800: #1D2343;
+$gray-900: #010101;
+
+$red: #EC1D24;
+
+$enable-navbar: {{ .Param "enableNavbar" }};
+
+$title-font: 'Poppins', sans-serif;
+$content-font: 'Poppins', sans-serif;
+
+$dark_active_font_color: $gray-50;
+$dark_link_color: $gray-50;
+$dark_link_hover_color: $gray-50;
+$dark_nav_logo_color: #FCFCFA;
+$dark-nav-menu-color: $gray-50;
+$dark-nav-icon-color: $gray-50;
+
+$light_active_font_color: $gray-900;
+$light_link_color: $gray-900;
+$light_link_hover_color: $gray-900;
+$light_nav_logo_color: #242729;
+$light-nav-menu-color: $gray-50;
+$light-nav-icon-color: $gray-50;
+
+$search-color: $gray-50;
+$footer-background-color: #262626;
+$footer-background-copyright-color: $gray-900;
+$footer-color: $gray-50;
+
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+@import 'abstracts/flexbox';
+
+@import 'syntax/syntax';
+
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/helpers';
+@import 'base/typography';
+@import 'base/animation';
+
+@import 'components/menu';
+@import 'components/toc';
+@import 'components/search';
+@import 'components/dropdown';
+@import 'components/drawer';
+@import 'components/modal';
+@import 'components/language';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/button';
+@import 'components/summary';
+@import 'components/expand';
+@import 'components/bgcolor';
+@import 'components/tag';
+@import 'components/section';
+@import 'components/lib';
+@import 'components/switch';
+@import 'components/notice';
+@import 'components/alert';
+@import 'components/tab';
+@import 'components/codetab';
+@import 'components/box';
+@import 'components/featuredImage';
+@import 'components/feedback';
+@import 'components/shortcodes';
+@import 'components/algolia';
+
+@import 'layout/grid';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/navbar';
+
+@import 'pages/page';
+@import 'pages/home';
+@import 'pages/single';
+@import 'pages/list';
+@import 'pages/blog';

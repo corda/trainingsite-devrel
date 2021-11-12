@@ -1,0 +1,8 @@
+<div id="mobileLogo" class="hide">
+  <input class="hide" type="checkbox" id="drawer-btn">
+
+  <label class="menu-icon navbar__icons--icon" for="drawer-btn"><span class="navicon"></span></label>
+  <a href="{{ "/" | relLangURL }}" rel="home" class="{{ if eq ($.Param "logoType") "long" }}navbar__long--link{{ else }}navbar__logo--link{{ end }}">
+  <img src="{{ "/logo.svg" | relURL }}" alt="Home" class="navbar__logo">
+  </a>
+</div>

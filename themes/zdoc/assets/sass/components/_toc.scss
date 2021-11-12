@@ -1,0 +1,76 @@
+.toc {
+  position: -webkit-sticky;
+  position: sticky;
+  top: $toc-top-height;
+  padding: 0 2rem 0 0;
+  margin: 0;
+  height: $toc-height;
+  overflow: auto;
+  z-index: z('toc');
+  max-height: 100vh;
+
+  @include no-select;
+  @include themify($themes) {
+    @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+    @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+  }
+
+  #TableOfContents {
+    position: relative;
+  }
+
+  &__body {
+    padding-left: 1.5rem;
+
+    @include themify($themes) {
+      border-left: 1px solid themed('toc-border');
+    }
+  }
+
+  &__label {
+    font-family: $title-font;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.25rem;
+
+    @include themify($themes) {
+      color: themed('toc-label-color');
+    }
+  }
+
+  @include themify($themes) {
+    a {
+      color: themed('toc-color');
+      font-size: $font-size-md;
+      position: relative;
+      display: block;
+      margin-bottom: 0.75rem;
+
+      @include on-event {
+        color: themed('link-hover');
+      }
+
+      &.active {
+        color: themed('active-font-color');
+
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  ul {
+    li {
+      li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+.expand__content {
+  #TableOfContents {
+    ul {
+      list-style-type: circle;
+    }
+  }
+}

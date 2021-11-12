@@ -1,0 +1,65 @@
+@import "../themes/theme";
+
+$text-font-stack: 'Poppins',
+              avenir,
+              'helvetica neue', helvetica,
+              ubuntu,
+              roboto, noto,
+              'segoe ui', arial,
+              sans-serif !default;
+$code-font-stack: 'Roboto Mono',
+              Consolas,
+              Monaco,
+              Menlo,
+              "DejaVu Sans Mono",
+              "Bitstream Vera Sans Mono",
+              "Courier New",
+              "Lucida Console",
+              "Lucida Sans Typewriter",
+              "Liberation Mono",
+              "Nimbus Mono L",
+              Monaco,
+              Courier,
+              monospace !default;
+
+$z-indexes: ("drawer", "modal", "dropdown", "navbar", "header", "gtt", "clipboard", "grid", "search-btn", "search", "menu", "content", "landing", "footer", "taxo", "toc", "gallery-mask", "section-title", "highlight");
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 600px,
+  'md': 960px,
+  'lg': 1280px,
+  'xl': 1600px,
+);
+
+$grid-max-width: 1fr;
+$grid-nav-height: 72px;
+$grid-nav-height-remain: calc(100vh - 72px);
+$toc-top-height: 214px;
+$toc-height: calc(100vh - 214px);
+$grid-body-width: 769px;
+$grid-side-width: 240px;
+$drawer-width: 320px;
+$menu-title-height: 32px;
+
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 0.9375rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+$font-size-4xl: 2rem;
+$font-size-5xl: 2.5rem;
+$font-size-6xl: 3rem;
+
+$font-weight-light: 300;
+$font-weight-base: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$font-weight-extrabold: 700;
+$font-weight-black: 800;
+
+
+

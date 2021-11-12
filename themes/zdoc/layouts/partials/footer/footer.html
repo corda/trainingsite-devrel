@@ -1,0 +1,60 @@
+{{ if $.Param "enableFooter" }}
+<div class="bot">
+  <footer class="footer">
+    <div class="divider boxed">
+      <div class="lmr">
+        <div class="footer__section--wrapper">
+          <div class="footer--title">
+            <a href="/" target="_blank" title="R3 Docs">
+              <img src="{{ "logo.svg" | absURL }}" alt="R3 Developers" width="192" height="40">
+            </a>
+            <ul class="footer--socials">
+              {{ range .Site.Menus.social -}}
+              <li class="footer__socials--item">
+                <a class="social-icon" href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}<span class="ms-2 visually-hidden">{{ .Name | safeHTML }}</span></a>
+              </li>
+              {{ end -}}
+            </ul>
+          </div>
+
+          <div class="footer--links">
+            <ul>
+              {{ range .Site.Menus.footer -}}
+              <li>
+                <a href="{{ .URL | absURL }}">{{ .Name | safeHTML }}</a>
+              </li>
+              {{ end -}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="divider boxed">
+        <div class="lmr">
+          <div class="footer__section--wrapper">
+            <div  class="footer__bottom--caption">
+              <p>
+                {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify }}{{ end }}
+              </p>
+            </div>
+
+            <div  class="footer__bottom--copyrights">
+              <ul class="dots red">
+                {{ range .Site.Menus.copyright -}}
+                <li>
+                  <a href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}{{ .Name | safeHTML }}</a>
+                </li>
+                {{ end -}}
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+</div>
+{{ end }}

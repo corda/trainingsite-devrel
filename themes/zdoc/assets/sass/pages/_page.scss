@@ -1,0 +1,19 @@
+@mixin menu() {
+  position: relative;
+  padding: 0 0 2rem 1rem;
+
+  @include themify($themes) {
+    background-color: themed('menu-background-color');
+  }
+
+  @media only screen and (max-width: 960px) {
+  }
+}
+
+@mixin main() {
+
+}
+
+@mixin toc() {
+
+}
