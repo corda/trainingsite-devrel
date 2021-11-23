@@ -1,0 +1,9 @@
+<div class="top">
+  <div class="header__wrapper">
+    <h1 class="title">{{ .Title }}</h1>
+    <ul class="reading-time dots">{{ partial "svgs/clock.svg" (dict "width" 15 "height" 15) }}&nbsp;&nbsp;
+      <li> Reading time: {{ math.Ceil (div (countwords .Content) 200.0) }} {{if gt (countwords .Content) 200.0 }}mins{{else}}min{{end}}</li>
+      <li> <a href="https://cordaledger.slack.com" target="_blank">Discuss on Slack</a></li>
+    </ul>
+  </div>
+</div>

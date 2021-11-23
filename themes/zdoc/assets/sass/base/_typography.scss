@@ -1,0 +1,156 @@
+/**
+ * Basic typography style for copy text
+ */
+
+ html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: $font-weight-base;
+  font-family: $text-font-stack;
+}
+
+code,
+pre {
+  font-size: $font-size-sm;
+  font-family: $code-font-stack;
+}
+
+.h1 {
+  font-size: 2.25rem;
+}
+
+.h2 {
+  font-size: 1.5rem;
+}
+
+.h3 {
+  font-size: 1.125rem;
+}
+
+.h4 {
+  font-size: 1rem;
+}
+
+.h5 {
+  font-size: 2rem;
+}
+
+.h6 {
+  font-size: 1.5rem;
+}
+
+.p1 {
+  font-size: 1.2rem;
+}
+
+.p2 {
+  font-size: 1rem;
+}
+
+.caption {
+  font-size: 0.8rem;
+}
+
+.text-xs {
+  font-size: $font-size-xs;
+  line-height: 1.333;
+}
+
+.text-sm {
+  font-size: $font-size-sm;
+  line-height: 1.43;
+}
+
+.text-base {
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+  line-height: 1.555;
+}
+
+.text-xl {
+  font-size: $font-size-xl;
+  line-height: 1.4;
+}
+
+.text-2xl {
+  font-size: $font-size-2xl;
+  line-height: 1.333;
+}
+
+.text-3xl {
+  font-size: $font-size-3xl;
+  line-height: 1.2;
+}
+
+.text-4xl {
+  font-size: $font-size-4xl;
+  line-height: 1.111;
+}
+
+.text-5xl {
+  font-size: $font-size-5xl;
+  line-height: 1;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+ul.dots {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 1.5rem;
+
+    &:after {
+      content: "•";
+      color: inherit;
+      font-size: 1rem;
+      line-height: 1;
+      left: 0.75rem;
+      display: inline-block;
+      position: relative;
+      top: 2px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &:after {
+        content: '';
+        left: 0;
+      }
+    }
+  }
+
+  &.red {
+    li {
+      &:after {
+        color: $red;
+      }
+    }
+
+  }
+}

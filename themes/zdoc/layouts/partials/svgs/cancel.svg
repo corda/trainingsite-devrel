@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="{{ .width }}"  stroke="currentColor" fill="none" height="{{ .height }}" viewBox="0 0 24 24">
+    <path d="M6 6L18.7742 18.7742" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 18.7742L18.7742 5.99998"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

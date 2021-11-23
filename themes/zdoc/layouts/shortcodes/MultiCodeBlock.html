@@ -1,0 +1,68 @@
+{{ $codes := .Inner }}
+{{ $count := strings.Count "```\n" $codes}}
+
+{{ $languages := "" }}
+{{ range $line:= (split $codes "\n") }}
+  {{ if in $line "```" }}
+    {{ $language := replace $line "```" "" }}
+    {{ $language = trim $language " " }}
+    {{ if $language }}
+      {{ if $languages }}
+        {{ $languages = (print $languages " " $language) }}
+      {{ else }}
+        {{ $languages = $language }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $id := substr (md5 .Inner) 0 16 }}
+<div id="{{ $id }}" class="codetab">
+        <div class="codetab__links">
+                {{ range (split $languages " ") }}
+
+                <button class="codetab__link" aria-label="Tab link">{{ . }}</button>
+                {{ end }}
+        </div>
+
+        {{ range $code := (split $codes "```\n") }}
+                {{ if in $code "```" }}
+                        {{ $code = (print $code "```\n") }}
+
+                        {{ $spaces  := "" }}
+
+                        {{ range $line:= (split $code "\n") }}
+                            {{ if in $line "```" }}
+                                {{ $language := $line }}
+                                {{ $language = strings.TrimRight " " $language   }}
+                                {{ $language = replace $language "```" ""  }}
+
+                                {{ if (eq (len $spaces) 0) }}
+                                    {{ $spaces = $language }}
+                                    {{ $language = trim $language " "}}
+                                    {{ $spaces = replace $spaces $language "" }}
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+
+                        {{ if (gt (len $spaces) 0) }}
+                            {{ $newCodes := "" }}
+                            {{ range $line:= (split $code "\n") }}
+                                {{ $line = strings.TrimPrefix $spaces $line }}
+                                {{ $newCodes = (print $newCodes $line "\n") }}
+                            {{ end }}
+                            {{ $code = $newCodes }}
+                        {{ end }}
+
+
+                        {{ $id = substr (md5 $code) 0 16 }}
+                        <div id="{{ $id }}" class="codetab__content">
+                                {{ $code | markdownify }}
+                        </div>
+
+                {{ end }}
+
+        {{ end }}
+
+
+</div>

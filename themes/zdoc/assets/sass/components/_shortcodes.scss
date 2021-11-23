@@ -1,0 +1,266 @@
+.ExpansiionPanel {
+    margin-bottom: 1rem;
+
+    @include themify($themes) {
+        border: 1px solid themed("expansion-border-color");
+        border-left: 3px solid themed("expansion-border-color");
+        border-radius:  0 4px 4px 0;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .title {
+        label {
+            padding: 0.5rem 1rem;
+            display: block;
+
+            svg {
+                margin-right: 1rem;
+            }
+        }
+
+        @include on-event() {
+            @include themify($themes) {
+                background-color: themed('hr-color');
+            }
+        }
+    }
+
+    .content {
+        display: none;
+        transition-duration: 0.2s;
+    }
+
+    & > input:checked {
+        ~ .title {
+            &>label {
+                &>svg {
+                    @include rotate(-180);
+                    @include transition(all, 0.15s, ease);
+                }
+            }
+        }
+
+        ~ .content {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+        }
+    }
+}
+
+
+.NavigationCardWrapper.cards {
+    @include flexbox();
+    @include align-items(stretch);
+    gap: 2.5rem;
+
+    .card {
+        @include flex(1 1 0);
+        @include flexbox();
+
+        font-size: $font-size-base;
+        font-weight: $font-weight-base;
+        text-decoration: none;
+        border-radius: 4px;
+
+        @include themify($themes) {
+            box-shadow: themed('card-box-shadow');
+        }
+
+
+        @include on-event(){
+            @include themify($themes) {
+                background-color: themed('card-active-background-color');
+            }
+        }
+
+        > div {
+            height: 100%;
+            width: 100%;
+            @include flexbox();
+            @include flex-direction(column);
+        }
+
+        &-title {
+            font-size: $font-size-lg;
+            font-weight: $font-weight-bold;
+            min-height: 80px;
+            padding: 0 0.5rem;
+            text-align: center;
+            @include flex(0 0 auto);
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            border-radius: 4px 4px 0 0 ;
+
+            @include themify($themes) {
+                background-color: themed('card-header-background-color');
+            }
+        }
+
+        &-body {
+            @include flex(1 1 auto);
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-between);
+
+            &-content {
+                position: relative;
+                bottom: 0;
+                padding: 1.5rem;
+
+                @include themify($themes) {
+                    border-top: solid 1px themed('hr-color');
+                }
+            }
+
+            &-footer {
+                position: relative;
+                bottom: 0;
+                padding: 0.75rem 1.5rem 1rem;
+                font-size: $font-size-sm;
+                @include flexbox();
+                @include align-items(center);
+
+                svg {
+                    margin-right: 1rem;
+                }
+
+                @include themify($themes) {
+                    border-top: solid 1px themed('hr-color');
+                }
+            }
+        }
+
+
+    }
+
+    @media only screen and (max-width: 1280px) {
+        gap: 1.5rem;
+
+        .card {
+            &-body {
+                &-content {
+                    padding: 1rem;
+                }
+
+                &-footer {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        @include flex-wrap(wrap);
+
+        .card {
+            @include flex(1 1 100%);
+        }
+    }
+}
+
+.HighlightBox.card {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(stretch);
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+
+
+    .card-header {
+        @include flex(0 0 4.5rem);
+        width: 4.5rem;
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    .card-body {
+        @include flex(1 1 auto);
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        overflow: auto;
+    }
+
+    &.support {
+        @include themify($themes) {
+            color: themed('alert-support-color');
+            background-color: themed('alert-support-background-color');
+            a {
+                color: themed('alert-support-color');
+            }
+        }
+    }
+
+    &.tip {
+        @include themify($themes) {
+            color: themed('alert-tip-color');
+            background-color: themed('alert-tip-background-color');
+            a {
+                color: themed('alert-tip-color');
+            }
+        }
+    }
+
+    &.info {
+        @include themify($themes) {
+            color: themed('alert-info-color');
+            background-color: themed('alert-info-background-color');
+            a {
+                color: themed('alert-info-color');
+            }
+        }
+    }
+
+    &.warn {
+        @include themify($themes) {
+            color: themed('alert-warn-color');
+            background-color: themed('alert-warn-background-color');
+            a {
+                color: themed('alert-warn-color');
+            }
+        }
+    }
+}
+
+
+.ExpansionPanelList {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+
+
+    @include themify($themes) {
+        border-left: 2px solid themed("expansion-border-color");
+    }
+
+    .ExpansionPanelListItem {
+        position: relative;
+        padding: 0 1rem 1rem 2rem;
+        &--number {
+            position: absolute;
+            left: -0.925rem;
+            top: 0;
+            height: 1.75rem;
+            width: 1.75rem;
+            text-align: center;
+
+            @include themify($themes) {
+                border: 2px solid themed("expansion-border-color");
+                background-color: themed("body-background-color");;
+                border-radius: 50%;
+            }
+        }
+
+        &--content {
+
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+
+}

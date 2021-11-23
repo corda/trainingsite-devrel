@@ -1,0 +1,16 @@
+{{ $number := .Get "number" }}
+{{ $numberShow := $number }}
+{{ if eq $number "check"}}
+  {{ $numberShow = partial "svgs/check.svg" (dict "width" 16 "height" 16) }}
+{{ end }}
+
+<div class="ExpansionPanelListItem">
+
+  <div class="ExpansionPanelListItem--number" data-number="$number">
+    {{ $numberShow }}
+  </div>
+
+  <div class="ExpansionPanelListItem--content">
+    {{ .Inner  }}
+  </div>
+</div>

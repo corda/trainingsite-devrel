@@ -1,0 +1,26 @@
+{{ $type:= .Get "type" }}
+<div class="HighlightBox card {{$type}}">
+    <div class="card-header">
+        {{ if eq $type "info"}}
+            {{ partial "svgs/info.svg" (dict "width" 24 "height" 40) }}
+        {{ end }}
+
+        {{ if eq $type "warn"}}
+            {{ partial "svgs/warn.svg" (dict "width" 24 "height" 40) }}
+        {{ end }}
+
+        {{ if eq $type "tip"}}
+            {{ partial "svgs/tip.svg" (dict "width" 24 "height" 40) }}
+        {{ end }}
+
+        {{ if eq $type "support"}}
+            {{ partial "svgs/support.svg" (dict "width" 30 "height" 40) }}
+        {{ end }}
+
+    </div>
+    <div class="card-body">
+        {{ .Inner | markdownify }}
+    </div>
+</div>
+
+

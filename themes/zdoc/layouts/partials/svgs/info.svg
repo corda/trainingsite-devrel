@@ -1,0 +1,4 @@
+<svg width="{{ .width }}" height="{{ .height }}" fill="none" stroke="currentColor"  xmlns="http://www.w3.org/2000/svg">
+    <circle cx="12" cy="19" r="11" transform="rotate(-180 12 19)" stroke-width="2"/>
+    <path d="M12 24v-5M12 15v-.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

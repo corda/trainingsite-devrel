@@ -1,0 +1,112 @@
+[[header]]
+  identifier = "developer-portal"
+  name = "Developer portal"
+  url = "https://developer.r3.com/"
+  weight = 1
+
+[[header]]
+  identifier = "docs"
+  name = "Docs"
+  url = "https://docs.r3.com/"
+  weight = 2
+
+[[header]]
+  identifier = "events"
+  name = "Events"
+  url = "https://developer.r3.com/events"
+  weight = 3
+
+[[header]]
+  identifier = "blog"
+  name = "Blog"
+  url = "https://developer.r3.com/blog"
+  weight = 4
+
+[[footer]]
+  name = "Developer portal"
+  url = "https://developer.r3.com/"
+  weight = 10
+[[footer]]
+  name = "Corda"
+  url = "https://www.corda.net/"
+  weight = 20
+[[footer]]
+  name = "Corda Enterprise"
+  url = "https://www.r3.com/corda-enterprise/"
+  weight = 30
+[[footer]]
+  name = "Conclave"
+  url = "https://conclave.net/"
+  weight = 40
+[[footer]]
+  name = "Developer Program"
+  url = "https://developer.r3.com/developer-program"
+  weight = 50
+[[footer]]
+  name = "Docs"
+  url = "https://docs.r3.com/"
+  weight = 60
+[[footer]]
+  name = "Community"
+  url = "https://community.r3.com/"
+  weight = 70
+[[footer]]
+  name = "Events"
+  url = "https://developer.r3.com/events"
+  weight = 80
+[[footer]]
+  name = "Blog"
+  url = "https://developer.r3.com/blog"
+  weight = 90
+[[footer]]
+  name = "Videos"
+  url = "https://developer.r3.com/videos"
+  weight = 100
+[[footer]]
+  name = "Resources"
+  url = "https://developer.r3.com/resources"
+  weight = 110
+[[footer]]
+  name = "Support"
+  url = "https://developer.r3.com/support"
+  weight = 120
+[[footer]]
+  name = "Careers"
+  url = "https://www.r3.com/careers/"
+  weight = 130
+[[footer]]
+  name = "About R3"
+  url = "https://www.r3.com/"
+  weight = 140
+
+[[bottom]]
+  name = "Terms of Use"
+  url = "https://www.r3.com/terms-of-use/"
+  weight = 10
+[[bottom]]
+  name = "Privacy Policy"
+  url = "https://www.r3.com/privacy-policy/"
+  weight = 20
+[[bottom]]
+  name = "Trademark Policy"
+  url = "https://www.r3.com/trademark-policy/"
+  weight = 30
+
+
+[[main]]
+  identifier = "docs"
+  name = "Docs"
+  url = "docs"
+  weight = 1
+
+[[main]]
+  identifier = "updates"
+  name = "Updates"
+  url = "updates"
+  weight = 2
+
+[[main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "blog"
+  weight = 3

@@ -1,0 +1,77 @@
+<div class="menu">
+  <div class="menu__label">
+    {{ if not .IsHome }}
+    <img src="/corda.svg" alt="Corda" height="25">
+    {{ end }}
+    <p>
+      Training and tutorials
+    </p>
+  </div>
+
+
+  {{ $currentURL := .Page.RelPermalink }}
+  {{ $menuEntries := index .Site.Menus.main }}
+
+  <ul>
+    {{ $page := . }}
+    {{ range $index, $element := $menuEntries.ByWeight }}
+      {{ template "menu-item" (dict "entry" $element "page" $page "currentURL" $currentURL "depth" 0) }}
+    {{ end }}
+  </ul>
+
+</div>
+
+{{ define "menu-item" }}
+  {{ $page := .page }}
+  {{ $currentURL := .currentURL }}
+  {{ $depth := .depth }}
+
+  {{ with .entry }}
+    {{ $active := in $currentURL .URL }}
+    {{ if .HasChildren }}
+    <li class="menu__title--collapse {{ if $active }}active{{ end }}" data-depth="{{ $depth }}">
+      <span class="menu__title--icon {{ if $active }}up{{ else }}down{{ end }}">
+        {{ partial "svgs/arrow-right.svg" (dict "width" 20 "height" 24) }}
+      </span>
+
+      <span class="menu__title--collapse-text">
+        {{ .Pre }} {{ .Name }}
+      </span>
+
+    </li>
+
+    <ul class="menu__list {{ if $active }}active{{ end }}" data-link="{{ .URL }}" data-depth="{{ $depth }}">
+      {{ range .Children.ByWeight }}
+        {{ template "menu-item" (dict "entry" . "page" $page "currentURL" $currentURL "depth" (add $depth 1)) }}
+      {{ end }}
+    </ul>
+  {{ else }}
+
+    <li class="{{ if $active }}active{{ end }}">
+      <a href="{{ .URL }}" class="menu__title {{ if $active }}active{{ end }}">{{ .Pre }} {{ .Name }}</a>
+    </li>
+  {{ end }}
+  {{ end }}
+{{ end }}
+
+
+<script>
+  var menuTitle = document.querySelectorAll('.menu__title');
+  var modal = document.getElementById("myModal");
+  var drawer = document.getElementById('myDrawer');
+
+  var closeDrawer = function () {
+    setTimeout(function () {
+      modal.style.opacity = 0;
+      drawer.style.left = '-100%';
+      modal.style.left = '-100%';
+    }, 250);
+  }
+
+  menuTitle ?
+  menuTitle.forEach(function(elem) {
+    elem.onclick = function() {
+      closeDrawer();
+    }
+  }) : null;
+</script>
