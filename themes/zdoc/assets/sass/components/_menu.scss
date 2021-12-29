@@ -53,7 +53,8 @@
     cursor: pointer;
     position: relative;
     word-break: break-word;
-    font-size: 0.925rem;
+    font-size: 1rem;
+    font-weight: $font-weight-bold;
     height: $menu-title-height;
     margin: 0.25rem 0;
 
@@ -92,12 +93,13 @@
     &--collapse {
       cursor: pointer;
       word-break: break-word;
-      font-size: 1rem;
+      font-size: 0.925rem;
       height: $menu-title-height;
       margin: 0.75rem 0;
 
       &[data-depth="0"] {
         font-weight: $font-weight-bold;
+        font-size: 1rem;
       }
 
       &[data-depth="1"] {
@@ -202,27 +204,29 @@
 
       a {
         display: inline;
+        font-size: 0.925rem;
+        font-weight: normal;
       }
     }
 
     &[data-depth="1"] {
       li {
-        margin-left: 3rem;
+        margin-left: 3.5rem;
       }
     }
     &[data-depth="2"] {
       li {
-        margin-left: 3.5rem;
+        margin-left: 4rem;
       }
     }
     &[data-depth="3"] {
       li {
-        margin-left: 4rem;
+        margin-left: 4.5rem;
       }
     }
     &[data-depth="4"] {
       li {
-        margin-left: 4.5rem;
+        margin-left: 5rem;
       }
     }
 

@@ -11,3 +11,22 @@
     @include justify-content(center);
   }
 }
+
+figure {
+  text-align: center;
+  img{
+    width: 100%;
+  }
+
+  &.small-image {
+    img{
+      max-width: 540px;
+    }
+  }
+
+  &.medium-image {
+    img{
+      max-width: 720px;
+    }
+  }
+}

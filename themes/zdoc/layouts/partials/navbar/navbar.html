@@ -1,6 +1,8 @@
 {{ if .Site.Params.enableNavbar }}
 <nav class="nav">
   <div class="navbar__wrapper">
+    {{ partial "main/component/announce.html" . }}
+
     <div class="divider full-width">
       <div class="navbar lmr">
         {{ partial "navbar/logo/navbar-logo.html" . }}
@@ -39,7 +41,6 @@
       //navMenuMobile.className = 'hide';
       siteSearch.className = '';
       mobileSearchBtn.className = 'hide';
-      console.log("<1280");
     },
     unmatch: function () {
       siteLogo.className = 'navbar__logo--wrapper';
@@ -49,7 +50,6 @@
       //navMenuMobile.className = 'hide';
       siteSearch.className = '';
       mobileSearchBtn.className = 'hide';
-      console.log(">1280");
     },
   }).register("screen and (max-width:960px)", {
     match: function () {
@@ -60,7 +60,6 @@
       //navMenuMobile.className = 'hide';
       siteSearch.className = 'mobile';
       mobileSearchBtn.className = 'navbar__icons--icon';
-      console.log("<960");
     },
     unmatch: function () {
       siteLogo.className = 'navbar__logo--wrapper';
@@ -70,7 +69,6 @@
       //navMenuMobile.className = 'hide';
       siteSearch.className = '';
       mobileSearchBtn.className = 'hide';
-      console.log(">960");
     },
   }).register("screen and (max-width:600px)", {
     match: function () {
@@ -81,7 +79,6 @@
       //navMenuMobile.className = '';
       siteSearch.className = 'mobile';
       mobileSearchBtn.className = 'navbar__icons--icon';
-      console.log("<600");
     },
     unmatch: function () {
       siteLogo.className = 'hide';
@@ -91,7 +88,6 @@
       //navMenuMobile.className = 'hide';
       siteSearch.className = 'mobile';
       mobileSearchBtn.className = 'navbar__icons--icon';
-      console.log(">600");
     },
   });
 </script>

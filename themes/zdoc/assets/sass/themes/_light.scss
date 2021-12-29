@@ -26,6 +26,8 @@ $light: (
         search-hover-border-color: #addafc,
         search-border-color: #e0e0e0,
         search-highlight-color: #FF6188,
+        search-results-background-color:  #fff,
+        search-results-border: 1px solid #fff,
         custom-scrollbar-foreground-color: #cfd8dc,
         custom-scrollbar-background-color: #FCFCFA,
         dropdown-hover-background-color: rgba(225, 225, 225, 0.4),
@@ -63,7 +65,7 @@ $light: (
         table-background-color: #f1f2f4,
         table-border-color: #d9dbe9,
 
-        card-background-color: #D9DBE9,
+        card-background-color: $white,
         card-header-background-color: #D9DBE9,
         card-box-shadow: 0 8px 16px 0 rgba(17, 17, 17, 0.06),
         card-active-background-color: $gray-100,

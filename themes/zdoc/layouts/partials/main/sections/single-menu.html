@@ -47,7 +47,7 @@
 {{ else }}
 
 <li class="{{ if $active }}active{{ end }}">
-  <a href="{{ .URL }}" class="menu__title {{ if $active }}active{{ end }}">{{ .Pre }} {{ .Name }}</a>
+  <a href="{{ .URL }}" class="menu__title {{ if $active }}active{{ end }}" target='{{ if hasPrefix .URL "http" }}_blank{{ end }}'>{{ .Pre }} {{ .Name }}</a>
 </li>
 {{ end }}
 {{ end }}

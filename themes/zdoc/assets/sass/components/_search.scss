@@ -62,6 +62,10 @@
       a {
         text-decoration: none !important;
       }
+
+      @media only screen and (max-width: 576px) {
+        width: 100%;
+      }
     }
 
     &__highlight {
@@ -127,20 +131,75 @@
           border-bottom: 2px dashed themed('hr-color');
 
           &--title {
+            font-weight: $font-weight-bold;
             font-family: $title-font;
             font-size: 1rem;
             margin: 0.25rem 0;
             color: themed('title-color');
-
-            &::before {
-              content: "📋 ";
-            }
           }
 
           &--desc {
             font-size: 0.9rem;
             margin: 0.25rem 0;
             color: themed('body-color');
+          }
+        }
+      }
+    }
+
+    #search-results {
+      &.dd {
+        display: none;
+        z-index: z('navbar');
+
+        &.is-active {
+          display: inline-block;
+          position: absolute;
+          top: 2.25rem;
+          width: 300px;
+          border-radius: .175rem;
+
+          @include box-shadow(0, 1px, 3px, 0, rgba(0, 0, 0, 0.4));
+          @include themify($themes) {
+            background-color: themed('search-results-background-color');
+            border: themed('search-results-border');
+          }
+
+          @media only screen and (max-width: 576px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .dd {
+        &-content {
+          margin-top: 0;
+          @include flexbox();
+          @include flex-direction(column);
+          @include themify($themes) {
+            @include moz-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+            @include webkit-scrollbars(themed('custom-scrollbar-foreground-color'), themed('custom-scrollbar-background-color'));
+          }
+        }
+
+        &-item {
+          width: 100%;
+          font-size: 1rem;
+          padding: 0.35rem 0.6rem;
+
+
+          @include on-event {
+            @include themify($themes) {
+              background-color: themed('search-hover-background-color');
+            }
+            border-bottom-left-radius: 0.1rem;
+            border-bottom-right-radius: 0.1rem;
+          }
+
+          &.is-active {
+            @include themify($themes) {
+              background-color: themed('search-hover-background-color');
+            }
           }
         }
       }
@@ -175,13 +234,12 @@
     &.show {
       max-width: unset;
       width: 100%;
-      text-align: right;
       position: fixed;
       left: 0;
       top: 0;
       height: 72px;
       padding: 1rem;
-      background: url("/images/background.png") no-repeat;
+      background: url("/images/background.png") no-repeat $gray-750;
       background-size: cover;
       background-position: top center;
       background-attachment: fixed;
@@ -190,6 +248,10 @@
 
       @media only screen and (max-width: 960px) {
         background-size: auto 100vh;
+      }
+
+      @media only screen and (max-width: 576px) {
+        background-attachment: initial;
       }
 
       .search-container__top {
@@ -232,7 +294,7 @@
     text-align: right;
     position: relative;
     height: 40px;
-    background: url("/images/background.png") no-repeat;
+    background: url("/images/background.png") no-repeat $gray-750;
     background-size: cover;
     background-position: top center;
     background-attachment: fixed;
@@ -242,6 +304,10 @@
 
     @media only screen and (max-width: 960px) {
       background-size: auto 100vh;
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-attachment: initial;
     }
 
     &--icon {
@@ -376,10 +442,6 @@
       font-size: 1.2rem;
       @include themify($themes) {
         color: themed('body-color');
-      }
-
-      &::before {
-        content: "📋 ";
       }
     }
 

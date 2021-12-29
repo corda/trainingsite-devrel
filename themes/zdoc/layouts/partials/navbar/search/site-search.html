@@ -4,11 +4,16 @@
 <div id="search-container">
   <div class="search-container__top">
     <div class="search">
-      <input id="search" type="text" aria-label="Search" placeholder="Search Corda docs" class="search-container__top--input"/>
+      <input id="search" type="text" aria-label="Search" placeholder="Search Corda training" class="search-container__top--input"/>
 
       <label class="icon" for="search">
         {{ partial "svgs/search.svg" (dict "width" 20 "height" 19) }}
       </label>
+
+      <div id="search-results" class="dropdown">
+        <div id="search-menu" class="dropdown-menu">
+        </div>
+      </div>
     </div>
 
     <div id="search-mobile-close" class="search-container__top--icon hide">

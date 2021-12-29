@@ -1,12 +1,12 @@
 #container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: $grid-nav-height auto 1fr auto;
+    grid-template-rows: minmax($grid-nav-height, auto)  auto 1fr auto;
     grid-column-gap: 20px;
     grid-row-gap: 0px;
 
     @if $enable-navbar == true {
-        grid-template-rows: $grid-nav-height auto 1fr auto;
+        grid-template-rows: minmax($grid-nav-height, auto) auto 1fr auto;
     } @else {
         grid-template-rows: 0 auto 1fr auto;
     }
