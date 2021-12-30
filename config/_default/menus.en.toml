@@ -136,51 +136,66 @@
   url = "https://www.r3.com/trademark-policy/"
   weight = 30
 
+
 [[main]]
-  identifier = "key-concepts"
-  name = "Key Concepts"
-  url = "/key-concepts"
+  identifier = "blockchain-basics"
+  name = "Blockchain Basics"
+  url = "/blockchain-basics"
   weight = 100
 
 [[main]]
-  identifier = "prepare-and-discover"
-  name = "Prepare and Discover"
-  url = "/prepare-and-discover"
-  weight = 200
+  identifier = "corda-fundamentals"
+  name = "Corda Fundamentals"
+  url = "/corda-fundamentals"
+  weight = 110
 
 [[main]]
-  identifier = "first-code"
-  name = "Your First Code"
-  url = "/first-code"
-  weight = 300
+  identifier = "getting-started"
+  name = "Getting Started"
+  url = "/getting-started"
+  weight = 120
+
+[[main]]
+  identifier = "your-first-cordapp"
+  name = "Your First Cordapp"
+  url = "/your-first-cordapp"
+  weight = 130
 
 [[main]]
   identifier = "libraries"
   name = "Libraries"
   url = "/libraries"
-  weight = 400
+  weight = 140
 
 [[main]]
-  identifier = "corda-details"
-  name = "Corda Details"
-  url = "/corda-details"
-  weight = 500
+  identifier = "token-sdk"
+  name = "Tokens SDK"
+  url = "/libraries/token-sdk"
+  parent = "libraries"
+  weight = 20
 
 [[main]]
-  identifier = "operations"
-  name = "Operations"
-  url = "/operations"
-  weight = 600
+  identifier = "account-sdk"
+  name = "Accounts SDK"
+  url = "/libraries/account-sdk"
+  parent = "libraries"
+  weight = 90
+
+[[main]]
+  identifier = "corda-advanced-concepts"
+  name = "Corda Advanced Concepts"
+  url = "/corda-advanced-concepts"
+  weight = 150
 
 [[main]]
   identifier = "in-closing"
-  name = "In closing"
+  name = "In Closing"
   url = "/in-closing"
-  weight = 700
+  weight = 160
 
 [[main]]
-  identifier = "fundamentals"
-  name = "Fundamentals"
-  url = "/fundamentals"
-  weight = 800
+  identifier = "training-1.0"
+  name = "Corda Training 1.0"
+  url = "https://github.com/r3developer/training.corda.net"
+  weight = 170
 

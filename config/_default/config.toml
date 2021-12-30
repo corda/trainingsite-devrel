@@ -1,6 +1,7 @@
 baseURL = "https://training.corda.net"
-title = "Corda Training - Corda Training and Tutorials - Corda Docs"
+title = "R3 Training - R3 Training and Tutorials - R3 Docs"
 theme = "zdoc"
+
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -12,7 +13,7 @@ enableEmoji = true
 paginate = 13
 rssLimit = 100
 
-googleAnalytics = "UA-87760032-4@"
+googleAnalytics = "UA-87760032-4"
 
 disableKinds = ["taxonomyTerm"]
 

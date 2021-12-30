@@ -1,6 +1,10 @@
-.nav {
-  position: relative;
+#container > .nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: z('navbar');
 }
+
 .navbar {
   height: 100%;
   position: relative;
@@ -10,24 +14,30 @@
 
   &__wrapper {
     width: 100%;
-    height: $grid-nav-height;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+
+
     z-index: z('navbar');
     color: inherit;
-    background: url("/images/background.png") no-repeat;
+    background: url("/images/background.png") no-repeat $gray-750;
     background-size: cover;
     background-attachment: fixed;
     background-position: top center;
 
     @include flexbox();
+    @include flex-wrap(wrap);
     @include align-items(center);
     @include justify-content(center);
 
     @media only screen and (max-width: 960px) {
       background-size: auto 100vh;
+    }
+
+    @media only screen and (max-width: 576px) {
+      background-attachment: initial;
+    }
+
+    .navbar {
+      height: $grid-nav-height;
     }
   }
 
@@ -219,8 +229,7 @@
         color: themed('navbar-icon-color');
         stroke: themed('navbar-icon-color');
         @include on-event {
-          color: themed('body-color');
-          background-color: themed('dropdown-hover-background-color');
+          color: $red;
         }
 
         & > a {

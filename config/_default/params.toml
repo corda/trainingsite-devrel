@@ -1,7 +1,9 @@
 logo = true
-logoText = "R3 Developer"
+logoText = "R3 Training - R3 Training and Tutorials - R3 Docs"
 logoType = "long" # long, short
 description = "Learn to use the Corda DLT platform"
+
+image = "/corda-training.jpg"
 
 themeOptions = ["light", "dark"]
 
@@ -29,9 +31,9 @@ taxoGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
 
 github = "https://github.com/corda/training.corda.net"
 
-algolia_appId = "BH4D9OD16A"
-algolia_apiKey = "9d50f6aab4503edc2dbba9a82575f69c"
-algolia_index = "corda_training"
+algolia_appId = "UX2KMUWFAL"
+algolia_apiKey = "98f0fbe8760facbdf9bb09b7fd2c8f83"
+algolia_index = "training.corda.net"
 
 # comment
 enableComment = false

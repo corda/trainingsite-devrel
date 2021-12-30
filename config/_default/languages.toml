@@ -1,11 +1,11 @@
 [en]
-  title = "R3 Developer"
+  title = "R3 Training - R3 Training and Tutorials - R3 Docs"
   languageName = "English"
   weight = 1
   contentdir = "content/en"
 
 [ko]
-  title = "R3 Developer"
+  title = "R3 Training - R3 Training and Tutorials - R3 Docs"
   languageName = "한국어"
   weight = 2
   contentdir = "content/ko"

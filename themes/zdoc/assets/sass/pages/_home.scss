@@ -82,7 +82,7 @@
     color: $white;
 
     &::before {
-      background: url("/images/background.png") no-repeat;
+      background: url("/images/background.png") no-repeat $gray-750;
       background-size: cover;
       background-attachment: fixed;
       background-position: top center;
@@ -99,6 +99,12 @@
     @media only screen and (max-width: 960px) {
       &::before {
         background-size: auto 100vh;
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      &::before {
+        background-attachment: initial;
       }
     }
 

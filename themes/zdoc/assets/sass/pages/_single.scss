@@ -78,7 +78,7 @@
     line-height: 1.75;
     width: inherit;
     max-width: inherit;
-    word-break: break-all;
+    word-break: break-word;
 
     h1,
     h2,
@@ -193,7 +193,7 @@
     }
 
     blockquote {
-      margin: 0 1.75rem 1.75rem 1.5rem;
+      margin: 1rem 1.75rem 1rem 1.5rem;
       padding: 0 0 0 1.42188rem;
       font-size: 1.05rem;
       font-style: italic;
@@ -230,6 +230,21 @@
     a {
       text-decoration: underline;
       cursor: pointer;
+
+      code:not([class^=language]) {
+        padding: 2px 7px;
+        margin: 0.125rem 0.25rem -0.425rem;
+        font-size: inherit;
+        @include themify($codeblock) {
+          color: themed('content-code-color');
+        }
+      }
+    }
+
+    h2, h3 {
+      code:not([class^=language]) {
+        margin-bottom: -0.5rem;
+      }
     }
 
     p {
@@ -237,7 +252,7 @@
 
       code:not([class^=language]) {
         padding: 2px 7px;
-        margin: 0 0.25rem;
+        margin: 0.125rem 0.25rem -0.425rem;
         font-size: inherit;
         @include themify($codeblock) {
           color: themed('content-code-color');
@@ -272,6 +287,8 @@
     li {
       & > code {
         padding: 2px 7px;
+        margin-top: 0.125rem;
+        margin-bottom: -0.425rem;
 
         @include themify($codeblock) {
           color: themed('content-code-color') !important;

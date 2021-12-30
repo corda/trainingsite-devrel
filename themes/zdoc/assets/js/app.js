@@ -557,25 +557,25 @@ var App = function () {
         // ========================== search ==========================
 
         if (document.querySelector('#search')) {
-            //https://www.algolia.com/doc/api-reference/api-parameters/facetFilters/?language=javascript
-            let algoliaOptions = {
-                hitsPerPage: 10,
-
-                //facetFilters: facetFilters,
-            };
-
-            // if(/404.html/.test(window.location.pathname)){
-            //     delete algoliaOptions.facetFilters;
-            // }
-
-            window.docsearch({
-                appId: algoliaAppId,
-                apiKey: algoliaKey,
-                indexName: algoliaIndex,
-                inputSelector: "#search",
-                algoliaOptions: algoliaOptions,
-                // debug: true,
-            });
+            // //https://www.algolia.com/doc/api-reference/api-parameters/facetFilters/?language=javascript
+            // let algoliaOptions = {
+            //     hitsPerPage: 10,
+            //
+            //     //facetFilters: facetFilters,
+            // };
+            //
+            // // if(/404.html/.test(window.location.pathname)){
+            // //     delete algoliaOptions.facetFilters;
+            // // }
+            //
+            // window.docsearch({
+            //     appId: algoliaAppId,
+            //     apiKey: algoliaKey,
+            //     indexName: algoliaIndex,
+            //     inputSelector: "#search",
+            //     algoliaOptions: algoliaOptions,
+            //     // debug: true,
+            // });
         }
 
         // ============================================================
@@ -613,6 +613,20 @@ var App = function () {
         return '_' + Math.random().toString(36).substr(2, 9);
     };
 
+    var _showAnnounce = function (){
+        var show_class = sessionStorage.getItem('announce');
+        if (show_class == null){
+            show_class = 'show';
+        }
+
+        document.getElementById('announce').classList.remove('hide');
+        document.getElementById('announce').classList.add(show_class);
+    }
+
+    var _hideAnnounce = function(){
+        sessionStorage.setItem('announce', 'hide');
+        document.getElementById('announce').classList.add('hide');
+    }
 
     return {
 
@@ -623,6 +637,7 @@ var App = function () {
         // Enable transitions when page is fully loaded
         initAfterLoad: function () {
             _initLayout();
+            _showAnnounce();
         },
 
         // Initialize all components
@@ -660,6 +675,10 @@ var App = function () {
                 document.body.classList.remove('modal-open');
                 popup.classList.remove('show');
             }
+        },
+
+        hideAnnounce: function (){
+            _hideAnnounce();
         }
     }
 }();
