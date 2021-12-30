@@ -2,6 +2,10 @@
 title: Set up Your Computer
 description: Install Java, IDE, Corda
 slug: set-up-your-computer
+aliases: [
+  "/prepare-and-discover/prepare-computer/",
+  "/prepare-and-discover/introduction/"
+]
 menu:
   main:
     parent: getting-started
