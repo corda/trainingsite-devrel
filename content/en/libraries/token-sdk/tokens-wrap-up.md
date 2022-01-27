@@ -2,6 +2,9 @@
 title: Tokens Wrap-Up
 description: Recap and reflection
 slug: libraries/tokens-wrap-up
+aliases: [
+  "/libraries/tokens-wrap-up/"
+]
 menu:
   main:
     parent: token-sdk

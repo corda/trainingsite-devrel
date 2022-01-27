@@ -2,6 +2,9 @@
 title: Package a signed JAR
 description: That's your CorDapp in a file
 slug: package-a-signed-jar
+aliases: [
+  "/operations/package-jar/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

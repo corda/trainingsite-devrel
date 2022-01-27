@@ -2,6 +2,9 @@
 title: Libraries Introduction
 description: Thou shalt not reinvent the wheel
 slug: libraries-introduction
+aliases: [
+  "/libraries/introduction/"
+]
 menu:
   main:
     parent: libraries

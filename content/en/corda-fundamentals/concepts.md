@@ -2,6 +2,9 @@
 title: Key Concepts
 description: Components and structure of a CorDapp
 slug: concepts
+aliases: [
+  "/key-concepts/concepts/"
+]
 menu:
   main:
     parent: corda-fundamentals

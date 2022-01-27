@@ -2,6 +2,9 @@
 title: Time-Windows
 description: Know when a transaction happened
 slug: time-windows
+aliases: [
+  "/corda-details/time-windows/"
+]
 menu:
   main:
     parent: corda-advanced-concepts
