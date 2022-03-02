@@ -19,6 +19,6 @@ R3 has put together many resources to help developers and enthusiasts to skill u
 - **Blog** ([developer.r3.com/blog](https://developer.r3.com/blog)) – Includes blog posts with updated information on R3’s technology and lots of code snippets.
 - **Videos** ([developer.r3.com/videos](https://developer.r3.com/videos)) – Short training videos to teach you how to set up token accounts, membership identity validation, etc.
 - **Community Forum** ([community.r3.com](https://community.r3.com)) – 24/7 support from team members, relative quick access to information on Corda, Conclave, Events, etc.
-- **Certification Exams** ([r3certification.com](r3certification.com)) – Certifications for Corda and Conclave blockchain technology. Learn how to set up and maintain a confidential blockchain.
+- **Certification Exams** ([r3certification.com](https://r3certification.com)) – Certifications for Corda and Conclave blockchain technology. Learn how to set up and maintain a confidential blockchain.
 - **eBooks** ([developer.r3.com/library](https://developer.r3.com/library)) – Free eBooks to download, carefully produced to expand your knowledge and train you for the Corda/Conclave certification exams.
 - **Product sites** ([corda.net](https://corda.net) and [conclave.net](https://conclave.net))  – Learn all about Corda and Conclave.
