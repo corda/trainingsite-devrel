@@ -2,6 +2,9 @@
 title: Run the example project
 description: See it in action
 slug: run-the-example-project
+aliases: [
+  "/prepare-and-discover/run-example/"
+]
 menu:
   main:
     parent: getting-started

@@ -2,6 +2,9 @@
 title: Oracles
 description: Introduce authoritative data on the ledger
 slug: oracles
+aliases: [
+  "/corda-details/oracles/",
+]
 menu:
   main:
     parent: corda-advanced-concepts

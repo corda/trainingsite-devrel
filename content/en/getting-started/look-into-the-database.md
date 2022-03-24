@@ -2,6 +2,9 @@
 title: Look into the database (vault)
 description: Run and see details inside the DB
 slug: look-into-the-database
+aliases: [
+  "/prepare-and-discover/see-db/"
+]
 menu:
   main:
     parent: getting-started

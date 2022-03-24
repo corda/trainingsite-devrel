@@ -2,6 +2,11 @@
 title: Attachments
 description: Attaching files to transactions
 slug: attachments
+aliases: [
+  "/corda-details/",
+  "/corda-details/attachments/",
+  "/corda-details/introduction/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

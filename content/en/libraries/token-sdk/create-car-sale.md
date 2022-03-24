@@ -2,6 +2,9 @@
 title: Make a car sale
 description: Create a flow to sell a car
 slug: create-car-sale
+aliases: [
+  "/libraries/create-car-sale/"
+]
 menu:
   main:
     parent: token-sdk

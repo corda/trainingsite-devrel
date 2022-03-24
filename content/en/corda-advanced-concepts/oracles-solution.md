@@ -2,6 +2,9 @@
 title: Oracles Solution
 description: This buyer wants no lien on their new car
 slug: oracles-solution
+aliases: [
+  "/corda-details/oracles-solution/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

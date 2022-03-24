@@ -2,6 +2,9 @@
 title: Automation
 description: Do things in the background
 slug: automation
+aliases: [
+  "/corda-details/automation/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

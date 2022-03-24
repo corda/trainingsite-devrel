@@ -2,6 +2,9 @@
 title: Create a new Token
 description: Create something new with the Tokens SDK
 slug: create-a-new-token
+aliases: [
+  "/libraries/create-car-token/"
+]
 menu:
   main:
     parent: token-sdk

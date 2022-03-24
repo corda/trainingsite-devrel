@@ -2,6 +2,9 @@
 title: Blockchain definitions
 decription: Conceptual foundations
 slug: blockchain-definitions
+aliases: [
+  "/fundamentals/blockchain-definitions/"
+]
 menu:
   main:
     parent: blockchain-basics

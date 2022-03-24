@@ -2,6 +2,9 @@
 title: Accounts Library
 description: Extend Cordapps to users who do not operate a node
 slug: accounts-lib
+aliases: [
+  "/libraries/accounts-lib/"
+]
 menu:
   main:
     parent: account-sdk

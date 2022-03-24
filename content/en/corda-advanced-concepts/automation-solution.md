@@ -2,6 +2,9 @@
 title: Automation Solution
 description: Where the buyer always has the latest car info
 slug: automation-solution
+aliases: [
+  "/corda-details/automation-solution/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

@@ -2,6 +2,9 @@
 title: Designing for Corda
 description: Your thought process
 slug: designing-corda
+aliases: [
+  "/prepare-and-discover/design-corda/"
+]
 menu:
   main:
     parent: your-first-cordapp

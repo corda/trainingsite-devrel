@@ -2,6 +2,9 @@
 title: Use the Tokens SDK
 description: Get acquainted with the SDK
 slug: how-to-use-tokens-sdk
+aliases: [
+  "/libraries/how-to-use-tokens-sdk/"
+]
 menu:
   main:
     parent: token-sdk

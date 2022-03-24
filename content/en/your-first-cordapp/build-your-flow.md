@@ -2,6 +2,9 @@
 title: Build Your Flow
 description: Create a flow
 slug: build-your-flow
+aliases: [
+  "/first-code/your-flow/"
+]
 menu:
   main:
     parent: your-first-cordapp

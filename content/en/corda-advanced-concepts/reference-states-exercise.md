@@ -2,6 +2,9 @@
 title: Reference States Exercise
 description: A truly atomic car sale
 slug: reference-states-exercise
+aliases: [
+  "/corda-details/reference-states-exercise/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

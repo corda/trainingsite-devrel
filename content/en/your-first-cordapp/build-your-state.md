@@ -2,6 +2,11 @@
 title: Build Your State
 description: Create a state and a contract
 slug: build-your-state
+aliases: [
+  "/first-code/your-state-contract/",
+  "/first-code/introduction/",
+  "/first-code/solution-state/"
+]
 menu:
   main:
     parent: your-first-cordapp

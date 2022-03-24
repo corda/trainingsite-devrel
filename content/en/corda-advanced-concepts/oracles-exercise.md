@@ -2,6 +2,9 @@
 title: Oracles Exercise
 description: Will your car be towed away?
 slug: oracles-exercise
+aliases: [
+  "/corda-details/oracles-exercise/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

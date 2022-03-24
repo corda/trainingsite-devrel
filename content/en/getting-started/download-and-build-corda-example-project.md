@@ -2,6 +2,11 @@
 title: Download and Build Corda Example Project
 description: Get and explore sample code
 slug: download-and-build-corda-example-project
+aliases: [
+  "/prepare-and-discover/git-intro/",
+  "/prepare-and-discover/introduction/",
+  "/prepare-and-discover/discover-example/"
+]
 menu:
   main:
     parent: getting-started

@@ -2,6 +2,9 @@
 title: Reference States
 description: Use states without destroying them
 slug: reference-states
+aliases: [
+  "/corda-details/reference-states/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

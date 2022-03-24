@@ -2,6 +2,9 @@
 title: Issue flow solution
 description: An example issue Tokens flow
 slug: solution-flows-issue
+aliases: [
+  "/first-code/solution-flows-issue/"
+]
 menu:
   main:
     parent: your-first-cordapp

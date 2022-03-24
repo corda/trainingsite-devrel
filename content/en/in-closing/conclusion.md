@@ -2,6 +2,10 @@
 title: Next Steps
 description: Congratulations! What's next?
 slug: conclusion
+aliases: [
+  "/in-closing/",
+  "/in-closing/conclusion/"
+]
 menu:
   main:
     parent: in-closing

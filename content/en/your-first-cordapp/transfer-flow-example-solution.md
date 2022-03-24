@@ -2,6 +2,10 @@
 title: Transfer flow example solution
 description: An example transfer IOU flow
 slug: transfer-flow-example-solution
+aliases: [
+  "/first-code/solution-flows-move/",
+  "/first-code/solution-flows-redeem/"
+]
 menu:
   main:
     parent: your-first-cordapp

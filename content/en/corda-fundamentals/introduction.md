@@ -2,6 +2,9 @@
 title: Introducing Corda
 description: Discover the Corda platform
 slug: introduction
+aliases: [
+  "/key-concepts/introduction/"
+]
 menu:
   main:
     parent: corda-fundamentals
