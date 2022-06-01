@@ -32,11 +32,7 @@ In this section, you will do the following:
 
 This section is all about IOUs. That's what the [cordapp-example](https://github.com/corda/samples-java/tree/master/Basic/cordapp-example) does. It creates IOUs. That's all. This may sound limited but there is plenty to get acquainted with and it is best to avoid the mental overhead of a complex application.
 
-You will use this project and follow its guidelines, and get pointers on what's happening in the code. In order to keep your experience synchronized with this documentation, you will rely on a specific commit.
-
-```git
-commit: cf21fb3dbf9972d61eb9b543e6fe79698f843110
-```
+You will use this project and follow its guidelines, and get pointers on what's happening in the code. 
 
 ## Prepare the Project
 
@@ -272,13 +268,7 @@ For `IOUState` to be usable as a state on the ledger, it would have sufficed for
 
    ![ContractState Implementations](/getting-started/contract_state_implementations.png)
 
-It says it found 26 implementations, which include `IOUState` in both `contracts-java` and `contracts-kotlin`. If you look to the right of the implementations list you will see that they are all found in:
 
-* `corda-test-utils-4.3.jar`
-* `corda-finance-contracts-4.3.jar`
-* `corda-core-4.3.jar`
-
-There are not 26 (minus the 2 `IOUState`) libraries. There are 3 libraries that contain 26 implementations of `ContractState`.
 
 {{<HighlightBox type="tip">}}
 
