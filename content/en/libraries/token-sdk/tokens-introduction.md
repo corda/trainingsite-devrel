@@ -2,6 +2,9 @@
 title: Introduction
 description: A reusable SDK for fungible and non-fungible assets
 slug: token-introduction
+aliases: [
+  "/libraries/tokens-sdk/"
+]
 menu:
   main:
     parent: token-sdk

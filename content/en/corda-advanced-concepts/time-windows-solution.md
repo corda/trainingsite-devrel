@@ -2,6 +2,9 @@
 title: Time-Windows Solution
 description: Example of expiration enforcement
 slug: time-windows-solution
+aliases: [
+  "/corda-details/time-windows-solution/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

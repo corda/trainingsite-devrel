@@ -2,6 +2,10 @@
 title: Car Sale Solution
 description: An example car sale solution using the Tokens SDK
 slug: car-sale-solution
+aliases: [
+  "/libraries/car-sale-solution/",
+  "/libraries/how-we-used-tokens-sdk/"
+]
 menu:
   main:
     parent: token-sdk

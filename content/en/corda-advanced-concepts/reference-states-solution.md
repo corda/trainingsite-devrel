@@ -2,6 +2,9 @@
 title: Reference States Solution
 description: An example of a sales proposal and acceptance
 slug: reference-states-solution
+aliases: [
+  "/corda-details/reference-states-solution/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

@@ -29,7 +29,7 @@
         }
     </script>
 
-    <div id="container">
+    <div id="container" class="{{ $.Param "slug" }}">
         {{ partial "drawer/drawer.html" . }}
         {{ partial "navbar/navbar.html" . }}
         {{ block "header" . }}{{ end }}

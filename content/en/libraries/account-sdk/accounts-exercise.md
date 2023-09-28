@@ -2,6 +2,9 @@
 title: Accounts Exercise
 description: Make use of the Accounts library
 slug: accounts-exercise
+aliases: [
+  "/libraries/accounts-exercise/"
+]
 menu:
   main:
     parent: account-sdk

@@ -2,6 +2,9 @@
 title: Accounts Solution
 description: Compare your solution to an example
 slug: accounts-solution
+aliases: [
+  "/libraries/accounts-solution/"
+]
 menu:
   main:
     parent: account-sdk

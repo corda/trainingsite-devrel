@@ -197,5 +197,5 @@
   identifier = "training-1.0"
   name = "Corda Training 1.0"
   url = "https://github.com/r3developer/training.corda.net"
-  weight = 170
+  weight = 180
 

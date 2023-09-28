@@ -2,6 +2,9 @@
 title: Time-Windows Exercise
 description: Enforce an expiration date
 slug: time-windows-exercise
+aliases: [
+  "/corda-details/time-windows-exercise/"
+]
 menu:
   main:
     parent: corda-advanced-concepts

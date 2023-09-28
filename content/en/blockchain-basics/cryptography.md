@@ -2,6 +2,9 @@
 title: Cryptography
 description: Encrypt, decrypt, sign and verify
 slug: cryptography
+aliases: [
+  "/fundamentals/cryptography/"
+]
 menu:
   main:
     parent: blockchain-basics

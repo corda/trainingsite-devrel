@@ -2,6 +2,9 @@
 title: Build Your Contract
 description: An example contract solution
 slug: build-your-contract
+aliases: [
+  "/first-code/solution-contract/"
+]
 menu:
   main:
     parent: your-first-cordapp

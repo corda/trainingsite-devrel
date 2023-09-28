@@ -2,6 +2,9 @@
 title: Distributed Ledger Technology
 description: The technology behind Blockchains
 slug: distributed-ledger-technology
+aliases: [
+  "/fundamentals/blockchain-basics/"
+]
 menu:
   main:
     parent: blockchain-basics
